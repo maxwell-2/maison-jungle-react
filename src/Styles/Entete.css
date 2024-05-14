@@ -1,0 +1,15 @@
+
+.JungleEntete{
+     
+    display: flex;
+    padding-left: 300px;
+    padding-top:30px;
+    border-bottom: solid black 5px;
+    
+}
+
+.TextEntete{
+    
+    margin-top: 50px;
+
+}
