@@ -7,3 +7,13 @@
     padding-left: 20px;
     color: white;
 }
+
+.btn-vider:hover{
+    color:white;
+    background-color:lightskyblue;
+    font-size: medium;
+    }
+    
+    .btn-vider{
+        font-size: medium;
+        }

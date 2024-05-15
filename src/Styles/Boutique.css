@@ -13,3 +13,14 @@
 
     margin:5px;
 }
+
+.btn-ajouter:hover{
+color:white;
+background-color:lightskyblue;
+font-size: medium;
+}
+
+.btn-ajouter{
+    color: black;
+    font-size:medium;
+    }

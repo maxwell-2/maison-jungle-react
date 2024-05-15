@@ -17,7 +17,8 @@ const plantList = [
 		id: '1ed',
 		light: 2,
 		water: 3,
-		cover: monstera
+		cover: monstera,
+		price:16
 	},
 	{
 		name: 'ficus lyrata',
@@ -25,7 +26,8 @@ const plantList = [
 		id: '2ab',
 		light: 3,
 		water: 1,
-		cover: lyrata
+		cover: lyrata,
+		price:14
 	},
 	{
 		name: 'pothos argenté',
@@ -33,7 +35,8 @@ const plantList = [
 		id: '3sd',
 		light: 1,
 		water: 2,
-		cover: pothos
+		cover: pothos,
+		price:8
 	},
 	{
 		name: 'yucca',
@@ -41,7 +44,8 @@ const plantList = [
 		id: '4kk',
 		light: 3,
 		water: 1,
-		cover: basil
+		cover: basil,
+		price:12
 	},
 	{
 		name: 'olivier',
@@ -49,7 +53,8 @@ const plantList = [
 		id: '5pl',
 		light: 3,
 		water: 1,
-		cover: olivier
+		cover: olivier,
+		price:14
 	},
 	{
 		name: 'géranium',
@@ -57,7 +62,8 @@ const plantList = [
 		id: '6uo',
 		light: 2,
 		water: 2,
-		cover: cactus
+		cover: cactus,
+		price:10
 	},
 	{
 		name: 'basilique',
@@ -65,7 +71,8 @@ const plantList = [
 		id: '7ie',
 		light: 2,
 		water: 3,
-		cover: mint
+		cover: mint,
+		price:8
 	},
 	{
 		name: 'aloe',
@@ -73,7 +80,8 @@ const plantList = [
 		id: '8fp',
 		light: 2,
 		water: 1,
-		cover: calathea
+		cover: calathea,
+		price:11
 	},
 	{
 		name: 'succulente',
@@ -81,7 +89,8 @@ const plantList = [
 		id: '9vn',
 		light: 2,
 		water: 1,
-		cover: succulent
+		cover: succulent,
+		price:16
 	}
 ]
 
@@ -89,6 +98,19 @@ function BoutiquePlantes({panier,updatepanier}){
 
 	const categories=plantList.reduce((acc,plant) =>
 		acc.includes(plant.category)? acc : acc.concat(plant.category),[])
+
+	function ajouter_panier(name,price){
+		const plantecouranteAjouter = panier.find((planteAjouter)=>
+			planteAjouter.name === name)
+		if (plantecouranteAjouter) {
+			const paniersansCourante=panier.filter((planteAj)=>
+				planteAj.name !== name)
+			updatepanier([...paniersansCourante,{name,price,amount:plantecouranteAjouter.amount+1}])
+
+		}else{
+            updatepanier([...panier,{name,price,amount:1}])
+		}		
+	}
 
     return(
     <div >
@@ -101,15 +123,16 @@ function BoutiquePlantes({panier,updatepanier}){
 	</ul>
 	
     <ul className='Boutique'>
-    {plantList.map(({id,name,cover,light,water})=>(
+    {plantList.map(({id,name,cover,light,water,price})=>(
 	  <div className='ensemble'>
      <ItemPlante id={id}
      name={name}
      cover={cover}
 	 light={light}
 	 water={water}
+	 price={price}
      />
-	 <button onClick={()=>updatepanier(panier + 1)}>Ajouter au panier</button>
+	 <button className='btn-ajouter'  onClick={()=>ajouter_panier(name,price)}>Ajouter au panier</button>
 	 
 	 </div>
 	 

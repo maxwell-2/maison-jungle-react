@@ -9,3 +9,19 @@
 .lesbesoins{
     display: flex;
 }
+
+.img-price{
+    display:flex;
+    flex-direction: column;
+}
+
+.prix-plante{
+    width: 30px;
+    height: 30px;
+    background-color: #31b572;
+    border-radius: 15px;
+    padding-top: 5px;
+    padding-left: 10px;
+    position:absolute;
+    margin-left:180px;
+}

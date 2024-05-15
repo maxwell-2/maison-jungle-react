@@ -5,10 +5,16 @@ import '../Styles/Entete.css'
 import logo from '../Images/logo.png'
 import Panier from './Panier.js'
 import '../Styles/Main.css'
-import { useState } from 'react'
+import { useState,useEffect } from 'react'
 
 function App() {
-  const [panier,updatepanier]=useState(0)
+  
+  const savedpanier = localStorage.getItem('panier')
+  const [panier,updatepanier]=useState(savedpanier ? JSON.parse(savedpanier) : [])
+	useEffect(() => {
+		localStorage.setItem('panier', JSON.stringify(panier))
+	}, [panier])
+
   return (
     <div >
 
