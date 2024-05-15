@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/maison-jungle-react/static/css/main.420d071a.css",
-    "main.js": "/maison-jungle-react/static/js/main.98a284c1.js",
+    "main.css": "/maison-jungle-react/static/css/main.1b02379d.css",
+    "main.js": "/maison-jungle-react/static/js/main.1b3598e7.js",
     "static/media/olivier.jpg": "/maison-jungle-react/static/media/olivier.b2908b40d9fb7f86626b.jpg",
     "static/media/monstera.jpg": "/maison-jungle-react/static/media/monstera.6257bc6b1e699fa6dde1.jpg",
     "static/media/basil.jpg": "/maison-jungle-react/static/media/basil.be00474e950eb5af0054.jpg",
@@ -14,11 +14,11 @@
     "static/media/sun.svg": "/maison-jungle-react/static/media/sun.26fb5ace82c593ca64a695a4d42b0568.svg",
     "static/media/water.svg": "/maison-jungle-react/static/media/water.cceb486fe1f26063bde712aa9fd7ea1e.svg",
     "index.html": "/maison-jungle-react/index.html",
-    "main.420d071a.css.map": "/maison-jungle-react/static/css/main.420d071a.css.map",
-    "main.98a284c1.js.map": "/maison-jungle-react/static/js/main.98a284c1.js.map"
+    "main.1b02379d.css.map": "/maison-jungle-react/static/css/main.1b02379d.css.map",
+    "main.1b3598e7.js.map": "/maison-jungle-react/static/js/main.1b3598e7.js.map"
   },
   "entrypoints": [
-    "static/css/main.420d071a.css",
-    "static/js/main.98a284c1.js"
+    "static/css/main.1b02379d.css",
+    "static/js/main.1b3598e7.js"
   ]
 }
